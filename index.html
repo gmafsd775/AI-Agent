@@ -204,11 +204,12 @@
       responseBox.scrollTop = responseBox.scrollHeight;
 
       try {
-        const res = await fetch(`${BASE_URL}/webhook/trigger-agent`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ message })
-        });
+        const res = await fetch("https://harrison-semimaterialistic-brock.ngrok-free.dev/webhook/trigger-agent", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ message })
+});
+
 
         const data = await res.json();
         responseBox.removeChild(typingMsg);
@@ -232,3 +233,4 @@
   </script>
 </body>
 </html>
+
